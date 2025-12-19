@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+:root {
+    --color1: #73BB85;
+    --color2: #3B8B6E;
+    --color3: #1D5959;
+    --color4: #16476F;
+    --color5: #0B2B40;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color5);
+    transition: 1.5;
+}
+a:hover {
+    color: var(--color4)
+}
+
+p {
+    font-weight: 500;
+    font-size: 20px;
+}
+h2, h4 {
+    color: var(--color4);
+    font: 600;
+}
+
+.navbar {
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+   background-color: white;
+   z-index: 2;
+    
+}
+
+.navbar .container-nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu-principal ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--color5)
+}
+
+.sidenav {
+    height: 100vh;
+    width: 160px;
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    left:0;
+    background: linear-gradient(rgba(22,71,111,1), rgba(59,139,110,1));
+    overflow-x: hidden;
+    padding-top: 160px;
+    transition: 0.5s;
+    margin-top: 80px;
+    padding: 8px 8px 8px 32px;
+}
+
+.sidenav a {
+    
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1
+}
+.sidenav a:hover {
+    color: var(--color5)
+}
+
+.sidenav .btn-outline-light {
+    border-radius: 30px;
+    padding: 2px 30px;
+    font-weight:400;
+    font-size:larger;
+    position: center;
+
+}
+
+.sidenav a:last-child {
+ margin-top: 80px;
+}
+
+
+@media screen and (max-height: 450px){
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.container-main {
+ 
+    top: 100px;
+    left: 200px;
+    max-width:100%;
+    padding: 3%;
+    position: absolute;
+}
+
+.container-main button {
+    background-color: #16476F;
+    color: white;
+    border-radius: 20px;
+    padding: 2px 17px;
+}
+
+.container-main button:hover {
+    color:white;
+    background-color: #0B2B40;
+}
+.container-main a ul li {
+    float: left;
+    display: inline;
+}
+
+table {
+    width: 170vh;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--color4);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e9e9e9;
+}
+
+.search input[type=text] {
+    float:right;
+    padding: 6px;
+    border:none;
+    margin-top:8px;
+    margin-right: 1px;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+    .search input[type=text] {
+        float:none;
+        display: blocl;
+        text-align: left;
+        width: 100%;
+        margin:0;
+        padding: 14px;
+    }
+}
+
+.search input[type=text] {
+    border: 1px solid #ccc;
+}
+
+.search button {
+    float:right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 1px;
+    background: #ddd;
+    font-size: 17px;
+    border:none;
+    border-radius: 0;
+}
+
+.search button:hover {
+    background-color: #e9e9e9;
+}
+
+.search {
+    width: 170vh;
+}
+
+.tela-incluir-container, .tela-alterar-container{
+    background-color: #ffff;
+    width: 460px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.7);
+    position:absolute;
+    top:20vh;
+    left:50vh;
+
+}
+.tela-incluir-container form input, .tela-alterar-container form input {
+    border-radius: 10px;
+    width: 100%;
+    border:none;
+    padding: 0px 10px;
+    background-color: #e9e9e9;
+}
+
+.tela-incluir-container .btn-sair, .tela-alterar-container .btn-sair {
+    background: none;
+    float:right
+}
+.tela-incluir-container .btn-sair:hover, .tela-alterar-container .btn-sair:hover {
+    background: none;
+}
+
+.tela-confirmação {
+    background-color: #ffff;
+    width: 460px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.7);
+    position:absolute;
+    top:20vh;
+    left:50vh;
+}
+
+tr.selected {
+  background-color: #e9e9e9;
+}
+tr.selected:hover {
+  cursor: pointer;
+}
+
+.overlay {
+    display: none;
+}
+
+
+tr {
+    cursor: pointer;
+}
